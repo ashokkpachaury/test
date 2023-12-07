@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Test</title>
+</head>
+<body>
+<script>
+    // fetch data from post method api server and log
+    fetch('https://rediscover.peakhours.in/api/v1/home', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+            "name": "test",
+        })
+    })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(err => console.log(err));
+
+</script>
+
+
+</body>
+
+</html>
